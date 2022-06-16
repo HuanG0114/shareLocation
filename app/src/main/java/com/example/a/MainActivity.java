@@ -16,6 +16,7 @@ import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         String apikey ="AIzaSyB2TTMM_C_ZCkRldPMBUV2-p3s5tKYuLHM";
 
         if(!Places.isInitialized()){
-            Places.initialize(getApplicationContext(),apikey);
+            Places.initialize(getApplicationContext(),apikey, Locale.CHINESE);
         }
         placesClient = Places.createClient(this);
         final AutocompleteSupportFragment autocompleteSupportFragment =
